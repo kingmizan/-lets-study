@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Study</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button id="timer-tab-btn" class="tab-btn active">
+                <i class="fas fa-clock"></i> Timer
+            </button>
+            <button id="leaderboard-tab-btn" class="tab-btn">
+                <i class="fas fa-trophy"></i> Leaderboard
+            </button>
+            <button id="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+
+        <main id="timer-view">
+            <div class="timer-display">
+                <p id="session-type">Work</p>
+                <h1 id="time-left">25:00</h1>
+            </div>
+            <div class="timer-controls">
+                <button id="start-pause-btn">Start</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <div id="session-counter">Completed: 0</div>
+        </main>
+
+        <main id="leaderboard-view" class="hidden">
+            <h2>Leaderboard</h2>
+            <div class="leaderboard-filters">
+                <button data-period="daily" class="filter-btn active">Daily</button>
+                <button data-period="monthly" class="filter-btn">Monthly</button>
+                <button data-period="lifetime" class="filter-btn">Lifetime</button>
+            </div>
+            <div id="leaderboard-loading">Loading...</div>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>User</th>
+                        <th>Time (mins)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <div id="user-rank">
+                </div>
+        </main>
+    </div>
+
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Welcome to Let's Study!</h2>
+            <p>Enter a username to join the leaderboard.</p>
+            <input type="text" id="username-input" placeholder="Your Username" maxlength="15">
+            <button id="login-btn">Start Studying</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
